@@ -39,6 +39,7 @@ class ApplicationController < Sinatra::Base
     ##your code here
   end
 
+#Renders failure.erb
   get "/failure" do
     erb :failure
   end
