@@ -44,7 +44,7 @@ class ApplicationController < Sinatra::Base
   end
 
 #find the user by username.
-#IS THE USER AUTHENTICATED? if yes, set session user id to redirect to success route.
+#IS THE USER AUTHENTICATED? if yes, set session user id to redirect to account
 #if not, failure, try again
 #did we find the user by that username? success or failure?
   post "/login" do
@@ -56,7 +56,7 @@ class ApplicationController < Sinatra::Base
     	redirect "/failure"
     end
   end
-  
+
 #Renders failure.erb
   get "/failure" do
     erb :failure
