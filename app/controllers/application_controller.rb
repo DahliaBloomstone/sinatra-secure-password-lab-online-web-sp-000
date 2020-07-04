@@ -47,7 +47,6 @@ class ApplicationController < Sinatra::Base
     else
     	redirect "/failure"
     end
-    end
   end
 
 #Renders failure.erb
