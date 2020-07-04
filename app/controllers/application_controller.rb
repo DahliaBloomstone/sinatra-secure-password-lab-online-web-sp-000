@@ -39,10 +39,10 @@ class ApplicationController < Sinatra::Base
     erb :login
   end
 
-  #find the user by username.
-  #IS THE USER AUTHENTICATED? if yes, set session user id to redirect to success route.
-  #if not, failure, try again
-  #did we find the user by that username? success or failure?
+#find the user by username.
+#IS THE USER AUTHENTICATED? if yes, set session user id to redirect to success route.
+#if not, failure, try again
+#did we find the user by that username? success or failure?
   post "/login" do
     user = User.find_by(:username => params[:username])
     if user && user.authenticate(params[:password])
