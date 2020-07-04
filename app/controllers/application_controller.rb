@@ -20,7 +20,7 @@ class ApplicationController < Sinatra::Base
 
 #Includes fields for username and password:
   post "/signup" do
-    user = User.new(:username => params[:username], :password => params[:password])
+  user = User.new(:username => params[:username], :password => params[:password])
 
   end
 
