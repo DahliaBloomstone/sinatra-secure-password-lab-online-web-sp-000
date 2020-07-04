@@ -18,6 +18,7 @@ class ApplicationController < Sinatra::Base
     erb :signup
   end
 
+#Includes fields for username and password:
   post "/signup" do
     #your code here
 
