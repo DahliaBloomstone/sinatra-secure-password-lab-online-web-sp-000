@@ -8,10 +8,12 @@ class ApplicationController < Sinatra::Base
     set :session_secret, "password_security"
   end
 
+#Renders an index.erb file with links to login or signup:
   get "/" do
     erb :index
   end
 
+#Renders a form to create a new user:
   get "/signup" do
     erb :signup
   end
