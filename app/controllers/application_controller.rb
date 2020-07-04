@@ -21,7 +21,11 @@ class ApplicationController < Sinatra::Base
 #Includes fields for username and password:
   post "/signup" do
   user = User.new(:username => params[:username], :password => params[:password])
-
+  if user.save
+     redirect "/login"
+   else
+     redirect "/failure"
+   end
   end
 
 #Renders an account.erb page which displays once user is logged in:
