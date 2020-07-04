@@ -24,7 +24,7 @@ class ApplicationController < Sinatra::Base
 
   end
 
-#
+#Renders an account.erb page which displays once user is logged in:
   get '/account' do
     @user = User.find(session[:user_id])
     erb :account
