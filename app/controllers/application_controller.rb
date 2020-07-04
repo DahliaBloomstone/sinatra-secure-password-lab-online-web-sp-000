@@ -50,7 +50,7 @@ class ApplicationController < Sinatra::Base
     redirect "/"
   end
 
-#Helper methods:
+#Helper methods: add logic to our views
   helpers do
     def logged_in?
       !!session[:user_id]
